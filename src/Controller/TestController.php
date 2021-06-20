@@ -9,4 +9,10 @@ class TestController
         var_dump("ça fonctionne");
         die();
     }
+
+    public function test()
+    {
+        dump("Page de test");
+        die();
+    }
 }
