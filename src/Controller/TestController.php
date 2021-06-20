@@ -12,7 +12,6 @@ class TestController
 
     public function test()
     {
-        dump("Page de test");
-        die();
+        dd("Page de test");
     }
 }
