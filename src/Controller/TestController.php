@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
+
 class TestController
 {
     public function index()
@@ -12,6 +14,9 @@ class TestController
 
     public function test()
     {
-        dd("Page de test");
+        $request = Request::createFromGlobals();
+        $age = $request->query->get('age', 0);
+
+        dd("Vous avez $age ans");
     }
 }
