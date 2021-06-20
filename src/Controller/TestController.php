@@ -13,10 +13,8 @@ class TestController
         die();
     }
 
-    public function test(Request $request)
+    public function test(Request $request, $age)
     {
-        $age = $request->attributes->get('age', 0);
-
         return new Response("Vous avez $age ans");
     }
 }
